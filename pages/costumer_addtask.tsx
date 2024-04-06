@@ -1,9 +1,8 @@
 // customer_addtask.tsx
 
 import { useState } from 'react';
-import Head from 'next/head';
 
-import CommonLayout from 'components/v2/Layout';
+import Navbar from '../components/Navbar';
 
 const AddTaskPage = () => {
   const [formData, setFormData] = useState({
@@ -70,13 +69,8 @@ const AddTaskPage = () => {
   return (
     <>
     
-    <Head>
-        <title>Add Task</title>
-        <meta name='description' content='Add Task' />
-        <link rel='icon' href='/favicon.ico' />
-    </Head>
+    <Navbar />
   
-    <CommonLayout>
     <div className="max-w-md mx-auto p-4 border border-gray-300 rounded">
       <h1 className="text-2xl font-bold mb-4">Add Task</h1>
       <form onSubmit={handleSubmit}>
@@ -136,7 +130,6 @@ const AddTaskPage = () => {
         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Submit</button>
       </form>
     </div>
-    </CommonLayout>
     </>
   );
 };
