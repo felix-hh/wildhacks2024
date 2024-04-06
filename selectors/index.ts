@@ -13,12 +13,42 @@ import {
   fetchBooks,
 } from "lib/http";
 
+// export interface BookProps {
+//   id: string;
+//   title: string;
+//   type: string;
+//   publishedAt: string;
+//   stock: number;
+//   price: string;
+//   authors: { author: AuthorType }[];
+//   averageRating: number;
+//   ratings: number;
+// }
+
+const myResponse = {
+  content: [
+    id: 'myid';
+    title: 'harry potter';
+    type: 'fantasy';
+    publishedAt: '1982';
+    stock: 4;
+    price: '15.23';
+    authors: { author: AuthorType }[];
+    averageRating: 10;
+    ratings: 10;
+  ]
+   total = length(content)
+
+}
+
+
 export const homePageQuery = selector({
   key: "homePage",
   get: async ({ get }) => {
     const { page, size, type, sort } = get(homePageQueryState);
     const response = await fetchBooks({ page, size, type, sort });
-    return response;
+    // return response;
+    return myResponse;
   },
 });
 
