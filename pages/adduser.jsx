@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-import Navbar from '../components/Navbar';
-
 const UserProfileForm = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -28,7 +26,6 @@ const UserProfileForm = () => {
 
   return (
     <>
-    <Navbar />
     <div className="flex justify-center items-center h-screen bg-gradient-to-r from-cyan-500 to-blue-500">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
         <form onSubmit={handleSubmit} className="space-y-6">
