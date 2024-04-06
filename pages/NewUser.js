@@ -1,10 +1,11 @@
 import Navbar from '../components/Navbar';
 import Nu from '../public/sample.jpeg';
 import Image from 'next/image';
+import Link from 'next/link'; // Import Link from Next.js
 
 const NewUser = () => {
 	return(
-		 <div>
+		<div>
 	      <Navbar />
 	      <div className="container mx-auto px-4 py-8">
 	        <header>
@@ -22,7 +23,15 @@ const NewUser = () => {
 	        <section className="cta text-center">
 	          <h2 className="text-2xl font-bold mb-4">Join Good Neighbor Today</h2>
 	          <p className="text-lg text-gray-700 mb-8">Sign up now to start posting tasks, finding contractors, and contributing to the enhancement and beautification of your community.</p>
-	          <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded" style={{ marginBottom: '20px'}}>Sign Up Now</button>
+	          
+	          <div className="space-x-4 mb-8"> {/* Container for buttons, with spacing */}
+	            <Link href="/adduser" passHref> {/* Link for Post Tasks */}
+	              <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded">Post Tasks</button>
+	            </Link>
+	            <Link href="/addprovider" passHref> {/* Link for Find Services */}
+	              <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded">Find Services</button>
+	            </Link>
+	          </div>
 
 	        </section>
 
