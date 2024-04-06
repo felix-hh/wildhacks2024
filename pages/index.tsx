@@ -1,4 +1,6 @@
 import Navbar from '../components/Navbar';
+import Nu from '../public/sample.jpeg';
+import Image from 'next/image';
 
 const HomePage = () => {
   return (
@@ -7,6 +9,9 @@ const HomePage = () => {
       <div className="container mx-auto px-4 py-8">
         <header>
           <h1 className="text-4xl font-bold text-center mb-4">Welcome to Good Neighbor</h1>
+          <div> 
+            <Image src={Nu} style={{ width: '100%', marginBottom: '20px' }} alt='picture of Northwestern' />
+          </div>
           <p className="text-lg text-gray-600 mb-8">GoodNeighbor is a platform designed 
           to connect urban residents and property owners with skilled contractors and service providers
            for small-scale urban development tasks. Whether it's fixing a pothole, painting a pedestrian 
@@ -17,7 +22,8 @@ const HomePage = () => {
         <section className="cta text-center">
           <h2 className="text-2xl font-bold mb-4">Join Good Neighbor Today</h2>
           <p className="text-lg text-gray-700 mb-8">Sign up now to start posting tasks, finding contractors, and contributing to the enhancement and beautification of your community.</p>
-          <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded">Sign Up Now</button>
+          <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded" style={{ marginBottom: '20px'}}>Sign Up Now</button>
+
         </section>
 
         <section className="community">
